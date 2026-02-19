@@ -4,7 +4,7 @@ project(jamanak VERSION 0.1.0 LANGUAGES CXX)
 
 option(BUILD_EXAMPLES "Build example executable" ON)
 
-# ---- Library (shared: libjamanak.so) ----
+# ---- Library ----
 add_library(jamanak SHARED src/jamanak.cpp)
 add_library(jamanak::jamanak ALIAS jamanak)
 
@@ -16,7 +16,7 @@ target_include_directories(jamanak
     $<INSTALL_INTERFACE:include>
 )
 
-# SONAME / versioning
+# ---- Lib version ----
 set_target_properties(jamanak PROPERTIES
   VERSION   ${PROJECT_VERSION}
   SOVERSION 0
