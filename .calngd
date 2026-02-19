@@ -1,0 +1,14 @@
+CompileFlags:
+  CompilationDatabase: build
+  Add: [-std=c++17]
+
+Diagnostics:
+  UnusedIncludes: false
+
+Index:
+  Background: Build
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
