@@ -72,18 +72,27 @@ In the code
 int main() {
     jamanak::Jamanak durations("Tasks");
 
-    durations.start("task A");
-    // ... do something ...
-    durations.end();
+    durations.begin_epoch();
 
-    durations.start("task B");
-    // ... do something ...
-    durations.end();
+    for (auto epoch=0; epoch < N; epoch++) {
 
-    durations.start("task C");
-    // ... do something ...
-    durations.end();
+        durations.start("task A");
+        // ... do task A ...
+        durations.end();
 
-    std::cout << durations.to_string();
+        durations.start("task B");
+        // ... do task B ...
+        durations.end();
+
+        durations.start("task C");
+        // ... do task C ...
+        durations.end();
+
+        // std::cout << durations.to_string();
+    }
+   
+    durations.end_epoch();
+
+    std::cout << durations.to_string_epochs();
 }
 ```
