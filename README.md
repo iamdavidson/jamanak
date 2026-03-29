@@ -1,5 +1,7 @@
 # jamanak
 
+![Screenshot](assets/demo.png)
+
 **jamanak** is a tiny C++ timing/benchmark helper that measures durations and prints them in a formated, colorful table.
 
 ---
